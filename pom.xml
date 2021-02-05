@@ -10,6 +10,7 @@
   <name>OpenAPI GeoServer REST config client</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
     <spring-boot.version>1.5.19.RELEASE</spring-boot.version>
     <openapi-generator-maven-plugin.version>4.3.1</openapi-generator-maven-plugin.version>
@@ -17,17 +18,15 @@
 
     <lombok.version>1.18.12</lombok.version>
     <guava.version>28.2-jre</guava.version>
-    <feign-form-version>3.7.0</feign-form-version>
-    <feign-version>10.2.0</feign-version>
-    <jackson-databind-nullable-version>0.2.0</jackson-databind-nullable-version>
-    <jackson-databind-version>2.8.11.2</jackson-databind-version>
-    <jackson-version>2.8.11</jackson-version>
-    <swagger-annotations.version>1.5.21</swagger-annotations.version>
-
+    <feign-version>11.0</feign-version>
+    <feign-form-version>3.8.0</feign-form-version>
+    <jackson-version>2.10.5</jackson-version>
+    <jackson-databind-version>2.10.5</jackson-databind-version>
+    <jackson-databind-nullable-version>0.2.1</jackson-databind-nullable-version>
+    <swagger-annotations.version>1.5.24</swagger-annotations.version>
     <oltu-version>1.0.2</oltu-version>
 
     <openapi-base-folder>${maven.multiModuleProjectDirectory}/openapi/1.0.0</openapi-base-folder>
-
     <openapi.api.v1>${openapi.basepackage}.api.v1</openapi.api.v1>
     <openapi.api.v1.client>${openapi.api.v1}.client</openapi.api.v1.client>
     <openapi.api.v1.model>${openapi.api.v1}.model</openapi.api.v1.model>
