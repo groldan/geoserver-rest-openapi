@@ -14,7 +14,6 @@ import java.util.Set;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.geoserver.openapi.model.catalog.WorkspaceInfo;
 import org.geoserver.openapi.v1.model.ComponentVersion;
 import org.junit.Rule;
@@ -44,7 +43,7 @@ public class IntegrationTestSupport extends ExternalResource {
         final String publicUrl =
                 resolve("geoserver_public_url", "http://carto.example.com/geoserver");
 
-        if (StringUtils.isEmpty(apiUrl)) {
+        if (isEmpty(apiUrl)) {
             log.warn(
                     "No geoserver_api_url System property provided, can't run geoserver integration tests.");
             return;
@@ -77,10 +76,10 @@ public class IntegrationTestSupport extends ExternalResource {
 
     private String resolve(String variable, String defaultValue) {
         String val = System.getenv(variable);
-        if (StringUtils.isEmpty(val)) {
+        if (isEmpty(val)) {
             val = System.getProperty(variable);
         }
-        if (StringUtils.isEmpty(val)) {
+        if (isEmpty(val)) {
             val = defaultValue;
         }
         return val;
@@ -140,5 +139,9 @@ public class IntegrationTestSupport extends ExternalResource {
         assertEquals(name, ws.getName());
         this.workspacesToCleanup.add(name);
         return ws;
+    }
+
+    static boolean isEmpty(final CharSequence cs) {
+        return cs == null || cs.length() == 0;
     }
 }
