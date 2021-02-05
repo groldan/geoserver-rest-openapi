@@ -1,0 +1,14 @@
+{
+	"generatorName": "java",
+	"modelPackage": "org.geoserver.openapi.model.catalog",
+	"apiPackage" : "org.geoserver.openapi.model.catalog",
+	"addCompileSourceRoot": "true",
+	"validateSpec": "true",
+	"sourceFolder" : "src",
+	"library" : "native",
+	"dateLibrary" : "java8",
+	"useTags" : "true",
+	"useRuntimeException" : "true",
+	"useBeanValidation" : "false",
+	"performBeanValidation" : "false"
+}
