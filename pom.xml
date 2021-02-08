@@ -36,6 +36,13 @@
     <fmt.action>format</fmt.action>
     <fmt.skip>false</fmt.skip>
   </properties>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/groldan/geoserver-rest-openapi</url>
+    </repository>
+  </distributionManagement>
   <modules>
     <module>generated</module>
     <module>java-client</module>
